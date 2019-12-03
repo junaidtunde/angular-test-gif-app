@@ -1,0 +1,13 @@
+.results {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.result-item {
+    margin: 1px;
+    flex: 1 0 19%;
+}
+
+.result-item > img:hover {
+    cursor: pointer;
+}

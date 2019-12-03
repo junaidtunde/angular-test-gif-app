@@ -1,0 +1,19 @@
+<div *ngIf="(gif | async)">
+    <div *ngIf="(gif | async).id.length" class="showcase">
+        <div class="showcase_img">
+            <img src="{{(gif | async).images.original.url}}" width="100%" height="100%" alt="">
+        </div>
+        <div class="showcase-details">
+            <h3>Title: {{(gif | async).title}}</h3>
+            <p>Source: {{(gif | async).source_tld}}</p>
+            <p>Type: {{(gif | async).type}}</p>
+            <p>Rating: {{(gif | async).rating}}</p>
+            <p>Url: {{(gif | async).embed_url}}</p>
+        </div>
+    </div>
+    <div *ngIf="!(gif | async).id.length">
+        <p>
+            Nothing Here
+        </p>
+    </div>
+</div>

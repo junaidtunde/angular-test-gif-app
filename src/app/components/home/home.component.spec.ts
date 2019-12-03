@@ -5,15 +5,21 @@ import { NgReduxModule } from "@angular-redux/store";
 import { RouterTestingModule } from "@angular/router/testing";
 import { DataService } from "src/app/services/data.service";
 
-import { ResultsListComponent } from "./results-list.component";
+import { HomeComponent } from "./home.component";
+import { SearchFieldComponent } from "./../../search-field/search-field.component";
+import { ResultsListComponent } from "./../../results-list/results-list.component";
 
-describe("ResultsListComponent", () => {
-    let component: ResultsListComponent;
-    let fixture: ComponentFixture<ResultsListComponent>;
+describe("HomeComponent", () => {
+    let component: HomeComponent;
+    let fixture: ComponentFixture<HomeComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ResultsListComponent],
+            declarations: [
+                HomeComponent,
+                SearchFieldComponent,
+                ResultsListComponent
+            ],
             imports: [
                 ReactiveFormsModule,
                 HttpClientModule,
@@ -25,25 +31,12 @@ describe("ResultsListComponent", () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(ResultsListComponent);
+        fixture = TestBed.createComponent(HomeComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
 
     it("should create", () => {
         expect(component).toBeTruthy();
-    });
-
-    it("should have a variable called gifs", () => {
-        let variable = component.gifs;
-        expect(variable).toBeDefined;
-        expect(variable).toBeTruthy;
-    });
-
-    it("has a valid function called gifDetails", () => {
-        var spy = spyOn(component, "gifDetails").and.callThrough();
-        expect(component).toBeDefined();
-        expect(spy);
-        expect(component.gifDetails).toBeDefined;
     });
 });

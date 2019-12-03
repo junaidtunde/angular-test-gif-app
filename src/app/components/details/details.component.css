@@ -1,0 +1,15 @@
+.showcase {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.showcase_img {
+    flex: 1 0 30%;
+}
+
+.showcase-details {
+    flex: 1 0 69%;
+    align-items: center;
+    margin: 1px;
+    padding: 2em;
+}
