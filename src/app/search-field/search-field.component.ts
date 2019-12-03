@@ -2,8 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { DataService } from "src/app/services/data.service";
 import { NgRedux } from "@angular-redux/store";
-import { IAppState } from "../store";
-import { ADD_GIFS } from "../actions";
+import { IAppState } from "../redux-store/store";
+import { ADD_GIFS } from "../redux-store/actions";
 
 @Component({
     selector: "app-search-field",

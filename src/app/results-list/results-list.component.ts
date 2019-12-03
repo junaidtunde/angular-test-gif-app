@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { NgRedux, select } from "@angular-redux/store";
-import { IAppState } from "../store";
-import { GIF_DETAILS } from "../actions";
+import { IAppState } from "../redux-store/store";
+import { GIF_DETAILS } from "../redux-store/actions";
 
 @Component({
     selector: "app-results-list",

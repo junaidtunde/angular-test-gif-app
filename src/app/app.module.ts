@@ -11,7 +11,7 @@ import { ResultsListComponent } from "./results-list/results-list.component";
 import { HomeComponent } from "./components/home/home.component";
 import { DetailsComponent } from "./components/details/details.component";
 
-import { IAppState, rootReducer, INITIAL_STATE } from "./store";
+import { IAppState, rootReducer, INITIAL_STATE } from "./redux-store/store";
 
 @NgModule({
     declarations: [
